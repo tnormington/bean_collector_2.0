@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Cost from './Cost';
+
 class Button extends Component {
   render() {
     return (
@@ -7,7 +9,7 @@ class Button extends Component {
         <div className="button__header">
             <span className="button__text">{ this.props.text }</span>
             { this.props.cost &&
-                <span className="button__cost">Cost: { this.props.cost.amount + ' ' + this.props.cost.resource } </span>
+                <Cost cost={this.props.cost}></Cost>
             }
         </div>
         <div className="button__description">{ this.props.description }</div>

@@ -93,7 +93,46 @@ const Model = {
                     }]
                 }
             ],
-        }
+        },{
+            text: 'Create Magic Bean',
+            description: 'Combine one of each color potion and some beans to make a magic bean.',
+            class: 'create-magic-bean',
+            cost: [{
+                resource: 'redPotion',
+                amount: 1,
+            },{
+                resource: 'bluePotion',
+                amount: 1,
+            },{
+                resource: 'greenPotion',
+                amount: 1,
+            },{
+                resource: 'blackPotion',
+                amount: 1,
+            },{
+                resource: 'beans',
+                amount: 250,
+            }],
+            onClick: [{
+                function: 'incrementResource',
+                variables: [ 1, 'magicBean' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 1, 'redPotion' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 1, 'bluePotion' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 1, 'greenPotion' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 1, 'blackPotion' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 250, 'beans' ]
+            }]
+        },
     ]
 }
 

@@ -8,9 +8,6 @@ import './App.sass';
 class App extends Component {
   constructor(props) {
     super(props);
-
-    // this.handleMultiButtonClick = Object.bind(this)
-
     this.state = {
       debug: true,
       buttons: Model.buttons,
@@ -22,9 +19,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    console.log(this.debug);
     if(this.state.debug) {
-      console.log('setting state for debug');
       this.setStateForDebug();
     }
 
@@ -46,6 +41,10 @@ class App extends Component {
       bps: 9999,
       beanPlants: 9999,
       beanExtract: 9999,
+      // redPotion: 9999,
+      // greenPotion: 9999,
+      // bluePotion: 9999,
+      // blackPotion: 9999,
     });
   }
 
@@ -53,9 +52,6 @@ class App extends Component {
     let bps = 0;
 
     bps += this.state.beanPlants;
-
-    // bps = Math.toFixed(2)
-
     return bps;
   }
 
@@ -76,10 +72,46 @@ class App extends Component {
     }));
   }
 
-  handleMultiButtonClick(value, resource) {
-    this.setState((prevState) => ({
-      [value+'Potion']: prevState[value+'Potion'] ? prevState[value+'Potion'] + 1 : 1,
-    }));
+  // handleMultiButtonClick(value, resource) {
+  //   this.setState((prevState) => ({
+  //     [value+'Potion']: prevState[value+'Potion'] ? prevState[value+'Potion'] + 1 : 1,
+  //   }));
+  // }
+
+
+  canAffordItem(cost) {
+    // console.log('checking if you can afford...', cost);
+    let canAfford = false;
+
+    if(cost.constructor === Array) {
+      let truthCounter = 0;
+      for(let c in cost) {
+        if(this.state[cost[c].resource] >= cost[c].amount) {
+          truthCounter++;
+        }
+      }
+      if(truthCounter === cost.length) {
+        canAfford = true;
+      }
+    } else {
+      if(this.state[cost.resource] >= cost.amount) {
+        canAfford = true;
+      }
+    }
+
+
+    // switch(typeof cost) {
+    //   case 'object':
+        
+    //     break;
+    //   case 'array':
+        
+    //     break;
+    //   default:
+    //     break;
+    // }
+
+    return canAfford;
   }
 
 
@@ -90,13 +122,14 @@ class App extends Component {
           { Object.keys(this.state).map(resource => {
             if(resource === 'buttons') return;
             if(resource === 'debug') return;
-            if(!this.state[resource]) return;
+            if(this.state[resource] === null) return;
             return <span className={ resource.toLowerCase() } key={resource}>{ resource }: { this.state[resource].toFixed(2) }</span>
           })}
         </div>
         <div className="buttons">
           { this.state.buttons.map((button, i) => {
-            if(button.cost === null || this.state[button.cost.resource] >= button.cost.amount) {
+             // if(button.cost != null) console.log(this.canAffordItem(button.cost)); 
+            if(button.cost === null || this.canAffordItem(button.cost)) {
               if(button.options) {
                 return <MultiButton
                   text={button.text}
@@ -108,8 +141,8 @@ class App extends Component {
                   }}
                   key={i}
                   className={button.class}
-                  cost={button.cost}
                   options={button.options}
+                  cost={button.cost}
                 />
               } else {
                 return <Button
