@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #dadada;
+  font-family: sans-serif;
+  font-weight: 100; }
+
+.app {
+  display: flex; }
+
+.buttons {
+  flex: 0 0 70%; }
+
+.stats {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column; }
+
+.button {
+  padding: 0.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5em;
+  user-select: none;
+  cursor: pointer;
+  background-color: white;
+  position: relative; }
+
+.button__text {
+  display: block; }
+
+.button__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.button__text {
+  flex: 1 1 content;
+  margin-right: 0.5em; }
+
+.button__cost {
+  background-color: #4c4c4c;
+  color: white;
+  border-radius: 35px;
+  font-size: 0.8em;
+  padding: 2px 5px; }
+
+.button__description {
+  font-size: 0.85em; }
+
+.multi-button .button__description {
+  margin-bottom: 5px; }
+
+.multi-button__options {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5px; }
+
+.multi-button__option {
+  padding: 5px;
+  color: white; }
+  .multi-button__option small {
+    display: block;
+    font-size: 0.8em; }
+  .multi-button__option.red {
+    background-color: #851B1B; }
+  .multi-button__option.blue {
+    background-color: #114998; }
+  .multi-button__option.green {
+    background-color: #119823; }
+  .multi-button__option.black {
+    background-color: black; }

@@ -1,0 +1,26 @@
+.multi-button .button__description
+    margin-bottom: 5px
+
+.multi-button__options
+    // display: flex
+    // justify-content: space-between
+    // flex-wrap: wrap
+    display: grid
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+
+.multi-button__option
+    padding: 5px
+    color: white
+    small
+        display: block
+        font-size: 0.8em
+    &.red
+        background-color: $red
+    &.blue
+        background-color: $blue
+    &.green
+        background-color: $green
+    &.black
+        background-color: black
+
