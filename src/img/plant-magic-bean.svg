@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="200px" viewBox="0 0 250 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>plant-magic-bean</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="260" height="192"></rect>
+        <circle id="path-3" cx="48" cy="23" r="163"></circle>
+        <filter x="-4.0%" y="-3.7%" width="109.2%" height="109.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="80.0083252%" cy="31.246936%" fx="80.0083252%" fy="31.246936%" r="78.3807143%" id="radialGradient-5">
+            <stop stop-color="#B14444" offset="0%"></stop>
+            <stop stop-color="#364A9B" offset="13.5770058%"></stop>
+            <stop stop-color="#5B1111" offset="57.7048788%"></stop>
+            <stop stop-color="#507A21" offset="100%"></stop>
+        </radialGradient>
+        <circle id="path-6" cx="48" cy="23" r="163"></circle>
+        <filter x="-4.0%" y="-3.7%" width="109.2%" height="109.2%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-13.1%" y="-15.7%" width="127.3%" height="133.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(-863.000000, -1.000000)">
+            <g id="plantBeanSprout" transform="translate(418.000000, 0.000000)">
+                <g id="button-/-plant-magic-bean" transform="translate(445.000000, 0.000000)">
+                    <g>
+                        <g id="button-bg-/-multi">
+                            <g>
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Mask"></g>
+                                <g id="Oval" mask="url(#mask-2)">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <use fill="" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                </g>
+                                <g id="Oval-Copy" mask="url(#mask-2)">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                    <use fill="url(#radialGradient-5)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Group-5-Copy-2" filter="url(#filter-8)" transform="translate(17.680000, 3.840000)" fill="#FFFFFF">
+                            <path d="M47.1299444,100.358514 C36.4497644,95.5162917 30.16,85.8521732 30.16,70.7396469 C30.16,52.9157688 42.5114573,26.9204739 58.5067663,16.1735999 C58.7969485,16.0432336 59.088191,15.8985168 59.380519,15.7387348 C64.2198329,13.0936404 70.5321435,11.0579926 75.2346408,13.7454522 C84.4634609,19.0196883 90.7921674,32.607211 94.5379736,42.2577147 C100.226398,56.9130808 100.44482,68.8478863 96.4087692,78.0108488 C93.3985027,84.8449955 88.0607008,89.7164715 82.8862136,91.6010606 C73.0251309,95.1925448 59.1539012,90.0260997 52.1155925,77.4945737 C48.7370942,71.4792453 49.7998739,64.9081052 54.2592786,58.6368884 C57.7311947,53.754367 63.1385427,49.169427 65.7024211,49.2282719 C72.0572342,49.3741246 75.2346408,54.531831 75.2346408,64.7013911 C79.9984518,52.701644 74.1067142,43.704926 64.9547353,45.127663 C60.957948,45.7489906 54.588905,50.5969888 50.4947398,56.354573 C45.2147925,63.7797106 43.9012129,71.9015408 48.1177416,79.4089608 C56.1970276,93.7939197 72.4834743,99.8599308 84.5386621,95.4693362 C90.8574362,93.1679887 97.1060474,87.4652744 100.580418,79.5774816 C105.059246,69.4092893 104.821652,56.426858 98.7774041,40.8547664 C96.2541938,34.3540963 93.5374201,25.5504356 90.1109528,17.0323182 C99.9579031,25.2514418 104.565251,41.6479619 107.601371,62.5057622 C111.137169,86.7962871 97.3960147,98.8381582 80.294774,102.680931 C62.1922336,103.382604 50.2462648,94.5131938 44.6807987,85.7181893 C39.2579973,77.1486351 39.0398157,67.0418633 43.0101208,56.4438522 C49.0483538,40.3258819 57.5910919,31.3480584 67.1580167,27.8067017 C72.5271099,25.8192423 82.3598868,36.0079557 86.5310758,48.0128106 C89.4991366,56.555013 87.4224285,70.784202 81.0812706,74.9847299 C75.194026,78.8845753 69.6803799,78.1783178 67.3239563,74.6600048 C65.1268542,71.3795703 67.0336807,67.6059336 73.3434999,66.0588085 C63.8576562,67.1169892 60.5744025,70.7131089 63.4937388,76.8471677 C67.8727434,86.0482558 75.7931158,83.6054542 83.7064247,78.3634975 C91.9706353,72.8890955 94.3173263,56.8100372 90.8192687,46.742482 C85.9346724,32.6844111 74.3386639,20.668639 65.48225,23.9469882 C54.6366309,27.9616749 45.1995818,37.8793571 38.7540786,55.0844616 C34.387528,66.7401781 34.4529305,82.5105288 40.6129928,92.2451629 C42.6065985,95.3956217 44.6834409,98.0568237 47.1299444,100.358514 Z" id="Combined-Shape" transform="translate(69.160000, 57.600000) rotate(30.000000) translate(-69.160000, -57.600000) "></path>
+                            <path d="M42.5789723,99.3911089 C17.5235434,100.890307 -1.13686838e-13,104.330404 -1.13686838e-13,108.33451 C-1.13686838e-13,113.716796 31.6624225,118.08 70.72,118.08 C109.777578,118.08 141.44,113.716796 141.44,108.33451 C141.44,103.898982 119.936887,100.15555 90.5124405,98.9758342 C76.7727136,111.172108 57.935415,108.257192 42.6378339,99.4251291 C42.6182015,99.4137943 42.5985809,99.4024542 42.5789723,99.3911089 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

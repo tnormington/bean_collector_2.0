@@ -83,6 +83,7 @@ const Model = {
             options: [
                 {
                     text: 'Red',
+                    classes: 'create-red-potion',
                     description: 'A crimson concoction.',
                     onClick: [{
                         function: 'incrementResource',
@@ -93,6 +94,7 @@ const Model = {
                     }]
                 },{
                     text: 'Blue',
+                    classes: 'create-blue-potion',
                     description: 'Deep as the sky.',
                     onClick: [{
                         function: 'incrementResource',
@@ -103,6 +105,7 @@ const Model = {
                     }]
                 },{
                     text: 'Green',
+                    classes: 'create-green-potion',
                     description: 'A toxin?',
                     onClick: [{
                         function: 'incrementResource',
@@ -113,6 +116,7 @@ const Model = {
                     }]
                 },{
                     text: 'Black',
+                    classes: 'create-black-potion',
                     description: 'And cold as night.',
                     onClick: [{
                         function: 'incrementResource',

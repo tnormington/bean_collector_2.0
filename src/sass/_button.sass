@@ -16,8 +16,12 @@
     border-color: $blue
     box-shadow: 0 0 4px rgba($blue, 0.5)
     background-size: auto 60px
+    &:active
+      border-color: $green
+      background-size: auto 55px
   &:active
     border-color: $green
+    background-size: auto 55px
   .costs
     display: flex;
     flex-wrap: wrap
@@ -44,10 +48,11 @@
 .button__text
   flex: 1 1 content;
   margin-right: 0.5em
+  font-weight: 400
 
 
 .button__description
-  font-size: 0.85em
+  font-size: 0.75em
 
 
 =buttonBg($name)
@@ -57,3 +62,6 @@
 +buttonBg('collect-bean')
 +buttonBg('plant-bean-sprout')
 +buttonBg('create-bean-extract')
++buttonBg('create-bean-stalk')
++buttonBg('create-magic-bean')
++buttonBg('plant-magic-bean')

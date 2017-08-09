@@ -7,16 +7,30 @@ body {
   font-weight: 100; }
 
 .app {
-  display: flex; }
+  display: flex;
+  align-items: flex-start; }
 
 .buttons {
   flex: 0 0 70%; }
 
 .stats {
   flex: 0 0 30%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding-right: 10px; }
+  @media (max-width: 540px) {
+    .stats {
+      grid-column-gap: 2%;
+      grid-template-columns: 49% 49%; } }
+
+@media (max-width: 540px) {
+  body {
+    margin: 0.25em; }
+  .app {
+    flex-wrap: wrap; }
+  .stats,
+  .buttons {
+    flex: 1 0 100%;
+    padding: 0; } }
 
 .button {
   padding: 0.5em;
@@ -36,8 +50,12 @@ body {
     border-color: #114998;
     box-shadow: 0 0 4px rgba(17, 73, 152, 0.5);
     background-size: auto 60px; }
+    .button:hover:active {
+      border-color: #119823;
+      background-size: auto 55px; }
   .button:active {
-    border-color: #119823; }
+    border-color: #119823;
+    background-size: auto 55px; }
   .button .costs {
     display: flex;
     flex-wrap: wrap;
@@ -63,10 +81,11 @@ body {
 
 .button__text {
   flex: 1 1 content;
-  margin-right: 0.5em; }
+  margin-right: 0.5em;
+  font-weight: 400; }
 
 .button__description {
-  font-size: 0.85em; }
+  font-size: 0.75em; }
 
 .button.collect-bean {
   background-image: url("./img/collect-bean.svg"); }
@@ -77,8 +96,21 @@ body {
 .button.create-bean-extract {
   background-image: url("./img/create-bean-extract.svg"); }
 
-.multi-button:hover {
-  border-color: transparent; }
+.button.create-bean-stalk {
+  background-image: url("./img/create-bean-stalk.svg"); }
+
+.button.create-magic-bean {
+  background-image: url("./img/create-magic-bean.svg"); }
+
+.button.plant-magic-bean {
+  background-image: url("./img/plant-magic-bean.svg"); }
+
+.multi-button {
+  padding-left: 0.5em;
+  padding-bottom: 0;
+  border: none; }
+  .multi-button:hover {
+    border-color: transparent; }
 
 .multi-button .button__description {
   margin-bottom: 5px; }
@@ -86,35 +118,43 @@ body {
 .multi-button__options {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 5px; }
+  margin: 0 -0.5em; }
 
 .multi-button__option {
   padding: 5px;
-  color: white;
-  transition: all 0.1s ease-out; }
+  transition: all 0.1s ease-out;
+  background-repeat: no-repeat;
+  background-size: 60px auto;
+  padding-left: 60px; }
   .multi-button__option:hover {
-    transform: scale(1.025);
+    background-size: 65px auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45); }
     .multi-button__option:hover:active {
-      transform: scale(0.975); }
+      background-size: 60px auto; }
   .multi-button__option:active {
-    transform: scale(0.975); }
+    background-size: 60px auto; }
   .multi-button__option small {
     display: block;
-    font-size: 0.8em; }
-  .multi-button__option.red {
-    background-color: #851B1B; }
-  .multi-button__option.blue {
-    background-color: #114998; }
-  .multi-button__option.green {
-    background-color: #119823; }
-  .multi-button__option.black {
-    background-color: black; }
+    font-size: 0.7em; }
+
+.multi-button__option.create-red-potion {
+  background-image: url("./img/create-red-potion.svg"); }
+
+.multi-button__option.create-blue-potion {
+  background-image: url("./img/create-blue-potion.svg"); }
+
+.multi-button__option.create-green-potion {
+  background-image: url("./img/create-green-potion.svg"); }
+
+.multi-button__option.create-black-potion {
+  background-image: url("./img/create-black-potion.svg"); }
 
 .stat {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 5px; }
 
 .stat__name {
   font-weight: 600; }
+
+.stat__amount {
+  margin-left: auto; }

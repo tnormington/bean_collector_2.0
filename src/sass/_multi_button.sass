@@ -1,4 +1,7 @@
 .multi-button
+    padding-left: 0.5em
+    padding-bottom: 0
+    border: none
     &:hover
         border-color: transparent
 
@@ -6,34 +9,38 @@
     margin-bottom: 5px
 
 .multi-button__options
-    // display: flex
-    // justify-content: space-between
-    // flex-wrap: wrap
     display: grid
     grid-template-columns: 50% 50%;
-    grid-gap: 5px;
+    margin: 0 -0.5em
+
 
 .multi-button__option
     padding: 5px
-    color: white
     transition: all 0.1s ease-out
+    background-repeat: no-repeat
+    background-size: 60px auto
+    padding-left: 60px
     &:hover
-        transform: scale(1.025)
+        background-size: 65px auto
+        // transform: scale(1.025)
         box-shadow: 0 2px 5px rgba(black, 0.45)
         &:active
-            transform: scale(0.975)
+            background-size: 60px auto
+            // transform: scale(0.975)
     &:active
-        transform: scale(0.975)
+        background-size: 60px auto
+        // transform: scale(0.975)
 
     small
         display: block
-        font-size: 0.8em
-    &.red
-        background-color: $red
-    &.blue
-        background-color: $blue
-    &.green
-        background-color: $green
-    &.black
-        background-color: black
+        font-size: 0.7em
 
+
+=multiPotion($name)
+    .multi-button__option.#{$name}
+        background-image: url('./img/#{$name}.svg')
+
++multiPotion('create-red-potion')
++multiPotion('create-blue-potion')
++multiPotion('create-green-potion')
++multiPotion('create-black-potion')

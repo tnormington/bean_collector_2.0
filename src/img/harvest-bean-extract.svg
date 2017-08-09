@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="250px" height="200px" viewBox="0 0 250 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>plant-bean-sprout</title>
+    <title>harvest-bean-extract</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="823.846154" height="211"></rect>
@@ -15,7 +15,7 @@
             <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <filter x="-18.0%" y="-13.6%" width="138.1%" height="128.7%" filterUnits="objectBoundingBox" id="filter-6">
+        <filter x="-13.7%" y="-15.9%" width="128.9%" height="132.6%" filterUnits="objectBoundingBox" id="filter-6">
             <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
@@ -26,9 +26,9 @@
         </filter>
     </defs>
     <g id="exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-4" transform="translate(-418.000000, -1.000000)">
-            <g id="plantBeanSprout" transform="translate(418.000000, 0.000000)">
-                <g id="button-/-plant-bean-sprout">
+        <g id="Group-4" transform="translate(-418.000000, -247.000000)">
+            <g id="greenPotion-Copy" transform="translate(418.000000, 246.000000)">
+                <g id="button-/-harvest-bean-extract">
                     <g>
                         <g id="button-bg-/-green">
                             <g id="button-bg">
@@ -42,11 +42,9 @@
                                 </g>
                             </g>
                         </g>
-                        <g id="Group" filter="url(#filter-6)" transform="translate(35.000000, 15.450453)" fill="#FFFFFF">
-                            <path d="M34.6018123,109.276823 C22.4100988,110.566725 11.1044477,113.584416 0.684859155,118.329897 C14.9938806,124.846776 30.9739275,128.105215 48.625,128.105215 C66.2760725,128.105215 82.2561194,124.846776 96.5651408,118.329897 C89.9683473,115.325464 83.0163897,113.013587 75.709268,111.394268 C71.3232674,118.103056 64.0319967,122.493104 55.7787469,122.493104 C46.6858241,122.493104 38.760578,117.164343 34.6018123,109.276823 Z" id="Combined-Shape"></path>
-                            <ellipse id="Oval-2" cx="38.5880282" cy="10.2196503" rx="9.58802817" ry="10.2196503"></ellipse>
-                            <ellipse id="Oval-2-Copy" cx="45.6971831" cy="50.7285327" rx="13.6971831" ry="14.5995004"></ellipse>
-                            <ellipse id="Oval-2-Copy-2" cx="55.4735915" cy="97.1606216" rx="18.4911972" ry="19.7093256"></ellipse>
+                        <g id="Group" filter="url(#filter-6)" transform="translate(76.000000, 72.774194) scale(-1, 1) translate(-76.000000, -72.774194) translate(12.000000, 14.451613)" fill="#FFFFFF">
+                            <path d="M10.5,115.741461 C16.2989899,115.741461 21,110.888805 21,104.902751 C21,98.9166973 12.5319786,96.3760618 12.6259465,79.483871 C4.07475738,89.7980163 0,98.9166973 0,104.902751 C0,110.888805 4.70101013,115.741461 10.5,115.741461 Z" id="Oval"></path>
+                            <path d="M126.522073,12.1792663 C127.461488,27.41737 133.038013,51.0688691 108.491086,65.6031819 C83.9441594,80.1374947 50.1074655,74.5232152 16.3818135,66.1717165 C27.2350508,65.6031819 41.2130077,37.3781884 58.3445551,15.5904741 C75.4761026,-6.19724015 125.582659,-3.05883728 126.522073,12.1792663 Z M96.4223144,30.6671404 C101.589584,40.5684754 101.939627,49.2049709 97.4724442,56.5766267 C94.606048,51.9827239 94.2560047,43.3462285 96.4223144,30.6671404 Z M82.8566677,37.7636171 C86.4626663,47.7247369 85.5311881,55.641694 80.0622332,61.5144883 C77.9292757,56.8057968 78.8607539,48.8888397 82.8566677,37.7636171 Z M67.5101013,46.473285 C67.1101438,55.4802042 63.7612978,60.9129089 57.4635632,62.7713992 C57.3107159,58.3190775 60.659562,52.8863728 67.5101013,46.473285 Z" id="Combined-Shape"></path>
                         </g>
                     </g>
                 </g>

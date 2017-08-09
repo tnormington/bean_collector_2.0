@@ -1,27 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="258px" height="186px" viewBox="0 0 258 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="250px" height="200px" viewBox="0 0 250 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>Oval</title>
+    <title>collect-bean</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="0" width="765" height="186"></rect>
+        <rect id="path-1" x="0" y="0" width="794.423077" height="196"></rect>
         <linearGradient x1="92.5139073%" y1="39.2355283%" x2="15.7715355%" y2="55.1774461%" id="linearGradient-3">
             <stop stop-color="#88B144" offset="0%"></stop>
             <stop stop-color="#507A21" offset="100%"></stop>
         </linearGradient>
+        <circle id="path-4" cx="48" cy="23" r="163"></circle>
+        <filter x="-4.0%" y="-3.7%" width="109.2%" height="109.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="2" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-13.8%" y="-17.9%" width="129.3%" height="137.9%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-220.000000, -202.000000)">
-            <g id="Oval" transform="translate(220.000000, 202.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Mask"></g>
-                <circle fill="url(#linearGradient-3)" mask="url(#mask-2)" cx="48" cy="23" r="163"></circle>
-                <g id="Group" mask="url(#mask-2)" fill="#FFFFFF">
-                    <g transform="translate(24.000000, 23.000000)">
-                        <circle id="Oval-2" cx="60.5" cy="40.5" r="40.5"></circle>
-                        <path d="M0.486048029,45 C2.57249394,76.5523727 28.8680792,101.5 61,101.5 C93.1319208,101.5 119.427506,76.5523727 121.513952,45 L112.083754,45 C110.195014,71.3179749 88.2107955,92.0833333 61.3686559,92.0833333 C34.5265164,92.0833333 12.5422978,71.3179749 10.6535577,45 L0.486048029,45 Z" id="Combined-Shape"></path>
+    <g id="exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(-418.000000, -493.000000)">
+            <g id="beans" transform="translate(418.000000, 492.000000)">
+                <g id="button-/-gather-bean">
+                    <g id="button-bg-/-green">
+                        <g id="button-bg">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <g id="Oval" mask="url(#mask-2)">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group" filter="url(#filter-6)" transform="translate(22.880000, 27.840000)" fill="#FFFFFF">
+                        <ellipse id="Oval-2" cx="62.92" cy="38.88" rx="42.12" ry="38.88"></ellipse>
+                        <path d="M0.50548995,43.2 C2.6753937,73.4902778 30.0228024,97.44 63.44,97.44 C96.8571976,97.44 124.204606,73.4902778 126.37451,43.2 L116.567104,43.2 C114.602815,68.4652559 91.7392273,88.4 63.8234022,88.4 C35.9075771,88.4 13.0439897,68.4652559 11.0797,43.2 L0.50548995,43.2 Z" id="Combined-Shape"></path>
                     </g>
                 </g>
             </g>

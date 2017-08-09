@@ -17,7 +17,7 @@ class MultiButton extends Component {
             { this.props.options.map(option => {
                     return(
                         <span 
-                            className={"multi-button__option " + option.text.toLowerCase() }
+                            className={"multi-button__option " + option.classes }
                             key={option.text}
                             onClick={ () => {
                                 this.props.onclick(option.onClick);

@@ -10,15 +10,31 @@ body
 
 .app
   display: flex
+  align-items: flex-start
 
 .buttons
   flex: 0 0 70%
 
 .stats
   flex: 0 0 30%
-  display: flex
-  flex-direction: column
+  display: grid
   padding-right: 10px
+  @media (max-width: $mobileBreak)
+    grid-column-gap: 2%;
+    grid-template-columns: 49% 49%;
+
+
+@media (max-width: $mobileBreak)
+  body
+    margin: 0.25em
+  .app
+    flex-wrap: wrap
+
+  .stats,
+  .buttons
+    flex: 1 0 100%
+    padding: 0
+
 
 
 

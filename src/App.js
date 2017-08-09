@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      debug: 0,
+      debug: 3,
       buttons: Model.buttons,
       beans: 0,
       BPS: 0,
