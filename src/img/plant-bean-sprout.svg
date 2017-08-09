@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="186px" viewBox="0 0 260 186" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>plant-bean-sprout</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="765" height="186"></rect>
+        <linearGradient x1="92.5139073%" y1="39.2355283%" x2="15.7715355%" y2="55.1774461%" id="linearGradient-3">
+            <stop stop-color="#88B144" offset="0%"></stop>
+            <stop stop-color="#507A21" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-18.0%" y="-14.0%" width="138.1%" height="129.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-222.000000, -201.000000)">
+            <g id="button-/-plant-bean-sprout" transform="translate(220.000000, 202.000000)">
+                <g>
+                    <g id="button-bg-/-green">
+                        <g id="button-bg">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <circle id="Oval" fill="url(#linearGradient-3)" mask="url(#mask-2)" cx="48" cy="23" r="163"></circle>
+                        </g>
+                    </g>
+                    <g id="Group" filter="url(#filter-4)" transform="translate(35.000000, 14.967626)" fill="#FFFFFF">
+                        <path d="M34.6018123,105.861922 C22.4100988,107.111514 11.1044477,110.034903 0.684859155,114.632088 C14.9938806,120.945314 30.9739275,124.101927 48.625,124.101927 C66.2760725,124.101927 82.2561194,120.945314 96.5651408,114.632088 C89.9683473,111.721543 83.0163897,109.481913 75.709268,107.913197 C71.3232674,114.412336 64.0319967,118.665194 55.7787469,118.665194 C46.6858241,118.665194 38.760578,113.502957 34.6018123,105.861922 Z" id="Combined-Shape"></path>
+                        <ellipse id="Oval-2" cx="38.5880282" cy="9.90028622" rx="9.58802817" ry="9.90028622"></ellipse>
+                        <ellipse id="Oval-2-Copy" cx="45.6971831" cy="49.143266" rx="13.6971831" ry="14.143266"></ellipse>
+                        <ellipse id="Oval-2-Copy-2" cx="55.4735915" cy="94.1243521" rx="18.4911972" ry="19.0934091"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

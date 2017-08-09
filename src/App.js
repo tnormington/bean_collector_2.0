@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Model from './Model';
+import Util from './Util';
 import Button from './components/Button';
 import MultiButton from './components/MultiButton';
+import Stat from './components/Stat';
 
 import './App.sass';
 
@@ -9,18 +11,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      debug: true,
+      debug: 0,
       buttons: Model.buttons,
-      beans: null,
-      beanPlants: null,
-      bps: 0,
+      beans: 0,
+      BPS: 0,
     };
   }
 
 
   componentDidMount() {
+    console.log(Util);
     if(this.state.debug) {
-      this.setStateForDebug();
+      this.setStateForDebug(this.state.debug);
     }
 
     window.setInterval(() => {
@@ -28,30 +30,64 @@ class App extends Component {
     }, Model.gameSettings.interval);
   }
 
+  // THIS HAPPENS EVERY 100ms
   update() {
-    this.setState(prevState => ({
-      beans: prevState.beans + this.state.bps / 10,
-      bps: this.calculateBps()
-    }));
+
+    const state = {
+      BPS: this.calculateBPS()
+    };
+
+
+    const beans = typeof this.state.beans == 'number' ? this.state.beans + this.state.BPS / 10 : this.state.beans;
+    let beanSprouts = this.state.beanSprouts;
+
+    if(beanSprouts != undefined) {
+      if(this.state.beanStalks) {
+        beanSprouts += this.state.beanStalks/200
+      }
+      state.beanSprouts = beanSprouts;
+    }
+
+    if(beans) 
+      state.beans = beans;
+
+
+
+    this.setState(state);
   }
 
-  setStateForDebug() {
+  setStateForDebug(level) {
+    let amount = 10;
+
+    if(level === 2) {
+      amount = 200;
+    }
+
+    if(level === 3) {
+      amount = 9999;
+    }
+
     this.setState({
-      beans: 9999,
-      bps: 9999,
-      beanPlants: 9999,
-      beanExtract: 9999,
-      // redPotion: 9999,
-      // greenPotion: 9999,
-      // bluePotion: 9999,
-      // blackPotion: 9999,
+      beans: amount,
+      BPS: amount,
+      beanSprouts: amount,
+      beanExtract: amount,
+      beanStalks: amount,
+      redPotion: amount,
+      greenPotion: amount,
+      bluePotion: amount,
+      blackPotion: amount,
     });
   }
 
-  calculateBps() {
+  calculateBPS() {
     let bps = 0;
-
-    bps += this.state.beanPlants;
+    if(typeof this.state.BPS != 'number') {
+      return this.state.BPS;
+    }
+    if(this.state.beanSprouts) {
+      bps += this.state.beanSprouts;
+    }
     return bps;
   }
 
@@ -72,15 +108,8 @@ class App extends Component {
     }));
   }
 
-  // handleMultiButtonClick(value, resource) {
-  //   this.setState((prevState) => ({
-  //     [value+'Potion']: prevState[value+'Potion'] ? prevState[value+'Potion'] + 1 : 1,
-  //   }));
-  // }
-
 
   canAffordItem(cost) {
-    // console.log('checking if you can afford...', cost);
     let canAfford = false;
 
     if(cost.constructor === Array) {
@@ -99,20 +128,11 @@ class App extends Component {
       }
     }
 
-
-    // switch(typeof cost) {
-    //   case 'object':
-        
-    //     break;
-    //   case 'array':
-        
-    //     break;
-    //   default:
-    //     break;
-    // }
-
     return canAfford;
   }
+
+
+
 
 
   render() {
@@ -123,12 +143,11 @@ class App extends Component {
             if(resource === 'buttons') return;
             if(resource === 'debug') return;
             if(this.state[resource] === null) return;
-            return <span className={ resource.toLowerCase() } key={resource}>{ resource }: { this.state[resource].toFixed(2) }</span>
+            return <Stat resource={resource} amount={this.state[resource]} key={resource}></Stat>
           })}
         </div>
         <div className="buttons">
           { this.state.buttons.map((button, i) => {
-             // if(button.cost != null) console.log(this.canAffordItem(button.cost)); 
             if(button.cost === null || this.canAffordItem(button.cost)) {
               if(button.options) {
                 return <MultiButton
@@ -143,6 +162,7 @@ class App extends Component {
                   className={button.class}
                   options={button.options}
                   cost={button.cost}
+                  classes={button.class}
                 />
               } else {
                 return <Button
@@ -156,6 +176,7 @@ class App extends Component {
                   key={i}
                   className={button.class}
                   cost={button.cost}
+                  classes={button.class}
                 />
               }
             }

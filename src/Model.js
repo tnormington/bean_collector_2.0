@@ -22,7 +22,7 @@ const Model = {
             },
             onClick: [{
                 function: 'incrementResource',
-                variables: [ 1, 'beanPlants' ]
+                variables: [ 1, 'beanSprouts' ]
             },{
                 function: 'decrementResource',
                 variables: [ 10, 'beans' ]
@@ -32,7 +32,7 @@ const Model = {
             description: 'Create 1 bean extract by harvesting 5 bean sprouts.',
             class: 'create-bean-extract',
             cost: {
-                resource: 'beanPlants',
+                resource: 'beanSprouts',
                 amount: 5,
             },
             onClick: [{
@@ -40,7 +40,37 @@ const Model = {
                 variables: [ 1, 'beanExtract' ]
             },{
                 function: 'decrementResource',
-                variables: [ 5, 'beanPlants' ]
+                variables: [ 5, 'beanSprouts' ]
+            }]
+        },{
+            text: 'Create Bean Stalk',
+            description: 'Combine 10 bean sprouts to create a bean stalk. Bean Stalks spawn Bean Sprouts every so often.',
+            class: 'create-bean-stalk',
+            cost: {
+                resource: 'beanSprouts',
+                amount: 10,
+            },
+            onClick: [{
+                function: 'incrementResource',
+                variables: [ 1, 'beanStalk' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 10, 'beanSprouts' ]
+            }]
+        },{
+            text: 'Harvest Stalks',
+            description: 'Harvest 1 Stalk from 5 Bean Stalks. A Stalk can be used as support for large items.',
+            class: 'harvest-stalk',
+            cost: {
+                resource: 'beanStalks',
+                amount: 5,
+            },
+            onClick: [{
+                function: 'incrementResource',
+                variables: [ 1, 'stalk' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 5, 'beanStalks' ]
             }]
         },{
             text: 'Create Bean Potion',
@@ -94,7 +124,7 @@ const Model = {
                 }
             ],
         },{
-            text: 'Create Magic Bean',
+            text: 'Infuse Beans',
             description: 'Combine one of each color potion and some beans to make a magic bean.',
             class: 'create-magic-bean',
             cost: [{
@@ -131,6 +161,26 @@ const Model = {
             },{
                 function: 'decrementResource',
                 variables: [ 250, 'beans' ]
+            }]
+        },{
+            text: 'Plant Magic Bean',
+            description: 'A Magic Bean requires a lot of nutrients while it is growing, you must mulch 100 Bean Sprouts and 20 Beans Per Second until the Magic Bean is harvested.',
+            class: 'plant-magic-bean',
+            cost: [{
+                resource: 'beanSprouts',
+                amount: 100,
+            }],
+            upKeep: [{
+                resource: 'beans',
+                amount: 20,
+                interval: 'second'
+            }],
+            onClick: [{
+                function: 'incrementResource',
+                variables: [ 1, 'Growing Magic Bean' ]
+            },{
+                function: 'decrementResource',
+                variables: [ 100, 'beanSprouts' ]
             }]
         },
     ]

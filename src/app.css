@@ -15,7 +15,8 @@ body {
 .stats {
   flex: 0 0 30%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-right: 10px; }
 
 .button {
   padding: 0.5em;
@@ -24,7 +25,19 @@ body {
   user-select: none;
   cursor: pointer;
   background-color: white;
-  position: relative; }
+  position: relative;
+  transition: all 0.1s ease-out;
+  border: 2px solid transparent;
+  background-repeat: no-repeat;
+  background-position: -2px -2px;
+  background-size: auto 55px;
+  padding-left: 70px; }
+  .button:hover {
+    border-color: #114998;
+    box-shadow: 0 0 4px rgba(17, 73, 152, 0.5);
+    background-size: auto 60px; }
+  .button:active {
+    border-color: #119823; }
   .button .costs {
     display: flex;
     flex-wrap: wrap;
@@ -55,6 +68,18 @@ body {
 .button__description {
   font-size: 0.85em; }
 
+.button.collect-bean {
+  background-image: url("./img/collect-bean.svg"); }
+
+.button.plant-bean-sprout {
+  background-image: url("./img/plant-bean-sprout.svg"); }
+
+.button.create-bean-extract {
+  background-image: url("./img/create-bean-extract.svg"); }
+
+.multi-button:hover {
+  border-color: transparent; }
+
 .multi-button .button__description {
   margin-bottom: 5px; }
 
@@ -65,7 +90,15 @@ body {
 
 .multi-button__option {
   padding: 5px;
-  color: white; }
+  color: white;
+  transition: all 0.1s ease-out; }
+  .multi-button__option:hover {
+    transform: scale(1.025);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45); }
+    .multi-button__option:hover:active {
+      transform: scale(0.975); }
+  .multi-button__option:active {
+    transform: scale(0.975); }
   .multi-button__option small {
     display: block;
     font-size: 0.8em; }
@@ -77,3 +110,11 @@ body {
     background-color: #119823; }
   .multi-button__option.black {
     background-color: black; }
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px; }
+
+.stat__name {
+  font-weight: 600; }

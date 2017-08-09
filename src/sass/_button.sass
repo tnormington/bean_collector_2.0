@@ -6,6 +6,18 @@
   cursor: pointer
   background-color: white
   position: relative
+  transition: all 0.1s ease-out;
+  border: 2px solid transparent
+  background-repeat: no-repeat
+  background-position: -2px -2px
+  background-size: auto 55px
+  padding-left: 70px
+  &:hover
+    border-color: $blue
+    box-shadow: 0 0 4px rgba($blue, 0.5)
+    background-size: auto 60px
+  &:active
+    border-color: $green
   .costs
     display: flex;
     flex-wrap: wrap
@@ -36,3 +48,12 @@
 
 .button__description
   font-size: 0.85em
+
+
+=buttonBg($name)
+  .button.#{$name}
+    background-image: url('./img/#{$name}.svg')
+
++buttonBg('collect-bean')
++buttonBg('plant-bean-sprout')
++buttonBg('create-bean-extract')
